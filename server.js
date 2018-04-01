@@ -2,13 +2,15 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
-const postRoutes = require('./api/routing/post.routing');
+const postRouts = require('./api/routing/post.routing');
+const userRouts = require('./api/routing/user.routing');
 
 
 
 app.use(express.json());
 
-app.use('/post', postRoutes);
+app.use('/post', postRouts);
+app.use('/user', userRouts);
 
 
 

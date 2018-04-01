@@ -10,14 +10,17 @@ router.post('/', (req, res) => {
         article: req.body.article,
         createdAt: new Date(),
         createdBy: req.body.createdBy,
-        comments: req.body.comments
+        // comments: req.body.comments
     }).save((err,doc)=>{
         if (err) {
-            res.status(500).json({})
+            res.status(500).json({err: err})
         }
-        console.log(req.body);
         res.status(200).json(doc);
     });
 })
+
+router.get('/', (req, res) => { 
+    
+ })
 
 module.exports = router;

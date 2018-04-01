@@ -6,7 +6,7 @@ let postSchema = mongoose.Schema({
     article: {type: String, require: true},
     createdAt: {type: Date, require: true},
     createdBy: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-    comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}]
+    // comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}]
 })
 
 module.exports = mongoose.model('Post', postSchema);

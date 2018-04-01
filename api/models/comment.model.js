@@ -7,4 +7,4 @@ let postSchema = mongoose.Schema({
     createdBy: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
 })
 
-mongoose.model('Post', postSchema);
+module.exports = mongoose.model('Comment', postSchema);
